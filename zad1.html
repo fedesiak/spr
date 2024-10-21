@@ -1,0 +1,43 @@
+<script>
+    var tab = new Array();
+    var a = prompt("Podaj liczbe: ");
+    a = a * 1;
+
+    for (i = 0; i < 20; i++) {
+        tab[i] = Math.floor(Math.random() * 89 + 10);
+        document.write(tab[i] + " ");
+    }
+    document.write("<br><br>");
+
+
+    if (tab.indexOf(a) < 0) {
+        document.write("Liczba nie istnieje<br>");
+    }
+    else {
+        document.write("<br>" + tab.indexOf(a) + "<br>");
+    }
+    document.write("<br>" + tab);
+    var tab2 = tab.slice(4, 10);
+    document.write("<br>" + tab2);
+    tab.push(333, 444, 555);
+    document.write("<br>" + tab);
+    tab.splice(2, 3);
+    document.write("<br>" + tab);
+    var stab = tab.join("");
+    document.write("<br>" + stab);
+    for (var i = 0; i < stab.length; i++) {
+        if (stab[i] == "2") {
+            document.write(stab[i].sub());
+
+        }
+        else {
+            document.write(stab[i]);
+        }
+
+    }
+
+
+
+
+
+</script>

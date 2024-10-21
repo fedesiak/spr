@@ -1,0 +1,36 @@
+<script>
+    //utworzyc tablice asocjacyjna gdzie tymi kluczami beda nazwy towarow a wartosciami ich ceny, wypisac ta tablice w
+    //postaci: nazwa towaru, cena jednostkowa, cena ze zlotowkami. Tworzymy druga tablice zwykla wypelniona liczbami losowymi od 1 do 20 wlacznie, koszt zakupu towaru to (cena jednostkowa * ilosc)
+    // obliczyć koszt całkowity
+    var tab2 = new Array();
+    for (var j = 0; j < 20; j++) {
+        tab2[j] = Math.floor(Math.random() * 20 + 1);
+    }
+
+    for (var j in tab2) {
+        document.write(tab2[j] + "<br>");
+
+
+    }
+
+    var tab = new Array();
+    var kosztc = 0;
+    tab["jablko"] = 1.99;
+    tab["gruszka"] = 2.99;
+    tab["banan"] = 3.99;
+    tab["pomarancza"] = 4.99;
+    tab["cytryna"] = 5.99;
+    for (var i in tab) {
+        var a = tab2[j];
+        document.write("nazwa towaru: " + i + " cena jednostkowa: " + tab[i] + "zł, ilość: " + a + "<br>");
+        var koszt = tab[i] * a;
+        document.write("koszt: " + koszt + "zł<br>");
+        tab[j]++;
+        kosztc = kosztc + koszt;
+    }
+    document.write("koszt całkowity: " + kosztc + "zł<br>");
+
+
+
+
+</script>
